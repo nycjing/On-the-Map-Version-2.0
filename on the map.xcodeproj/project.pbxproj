@@ -15,6 +15,8 @@
 		BFF02ACA1B95D1C100E6CAAE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF02AC81B95D1C100E6CAAE /* LaunchScreen.xib */; };
 		BFF02AD61B95D1C100E6CAAE /* on_the_mapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF02AD51B95D1C100E6CAAE /* on_the_mapTests.swift */; };
 		BFF02AE01B95E1AB00E6CAAE /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF02ADF1B95E1AB00E6CAAE /* LoginButton.swift */; };
+		BFF02AE21B96088000E6CAAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF02AE11B96088000E6CAAE /* LoginViewController.swift */; };
+		BFF02AE41B9609A000E6CAAE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF02AE31B9609A000E6CAAE /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		BFF02AD41B95D1C100E6CAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFF02AD51B95D1C100E6CAAE /* on_the_mapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = on_the_mapTests.swift; sourceTree = "<group>"; };
 		BFF02ADF1B95E1AB00E6CAAE /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		BFF02AE11B96088000E6CAAE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BFF02AE31B9609A000E6CAAE /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				BFF02ABC1B95D1C100E6CAAE /* AppDelegate.swift */,
+				BFF02AE31B9609A000E6CAAE /* Config.swift */,
 				BFF02AC11B95D1C100E6CAAE /* ViewController.swift */,
+				BFF02AE11B96088000E6CAAE /* LoginViewController.swift */,
 				BFF02AC31B95D1C100E6CAAE /* Main.storyboard */,
 				BFF02ADF1B95E1AB00E6CAAE /* LoginButton.swift */,
 				BFF02AC61B95D1C100E6CAAE /* Images.xcassets */,
@@ -221,7 +227,9 @@
 				BFF02AC21B95D1C100E6CAAE /* ViewController.swift in Sources */,
 				BFF02AE01B95E1AB00E6CAAE /* LoginButton.swift in Sources */,
 				BFF02ABD1B95D1C100E6CAAE /* AppDelegate.swift in Sources */,
+				BFF02AE21B96088000E6CAAE /* LoginViewController.swift in Sources */,
 				BFF02AC01B95D1C100E6CAAE /* on_the_map.xcdatamodeld in Sources */,
+				BFF02AE41B9609A000E6CAAE /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
