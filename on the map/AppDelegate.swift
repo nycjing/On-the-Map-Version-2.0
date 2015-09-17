@@ -15,16 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
         /* Constants for Udacity*/
-        let apiKey = "ENTER_YOUR_API_KEY_HERE"
-        let baseURLString = "http://api.themoviedb.org/3/"
-        let baseURLSecureString = "https://api.themoviedb.org/3/"
+        let udacity_apiKey = "365362206864879"
+        let baseURLString = "http://www.udacity.com/api/session"
+        let baseURLSecureString = "https://www.udacity.com/api/session"
         
         /* Need these for login */
         var requestToken: String? = nil
         var sessionID: String? = nil
         var userID: Int? = nil
         
-        /* Configuration for TheMovieDB, we'll take care of this for you =)... */
         var config = Config()
         
         func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

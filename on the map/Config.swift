@@ -20,8 +20,8 @@ private let _fileURL: NSURL = _documentsDirectoryURL.URLByAppendingPathComponent
 class Config: NSObject, NSCoding {
     
     /* Default values from 1/12/15 */
-    var baseImageURLString = "http://image.tmdb.org/t/p/"
-    var secureBaseImageURLString =  "https://image.tmdb.org/t/p/"
+  var baseImageURLString = "https://www.udacity.com/api/session/"
+    var secureBaseImageURLString =  "https://www.udacity.com/api/session"
     var posterSizes = ["w92", "w154", "w185", "w342", "w500", "w780", "original"]
     var profileSizes = ["w45", "w185", "h632", "original"]
     var dateUpdated: NSDate? = nil
@@ -87,7 +87,7 @@ class Config: NSObject, NSCoding {
     
     func updateConfiguration() {
         
-        /* TASK: Get TheMovieDB configuration, and update the config */
+        /* TASK: Get Udacity session, and update the config */
         
         /* Grab the app delegate and session */
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -95,7 +95,7 @@ class Config: NSObject, NSCoding {
         
         /* 1. Set the parameters */
         let methodParameters = [
-            "api_key": appDelegate.apiKey
+            "api_key": appDelegate.udacity_apiKey
         ]
         
         /* 2. Build the URL */
@@ -168,5 +168,5 @@ class Config: NSObject, NSCoding {
         } else {
             return nil
         }
-    }
+    } 
 }
