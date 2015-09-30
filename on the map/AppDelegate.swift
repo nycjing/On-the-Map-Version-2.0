@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
             
             /* If necessary, update the configuration */
-            config.updateIfDaysSinceUpdateExceeds(7)
+          //  config.updateIfDaysSinceUpdateExceeds(7)
             
             return true
         }

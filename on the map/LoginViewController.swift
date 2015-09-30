@@ -42,6 +42,11 @@ class LoginViewController: UIViewController {
         /* Get the shared URL session */
         session = NSURLSession.sharedSession()
         
+        var tapRecognizer = UITapGestureRecognizer(target: self, action: "handleSingleTap:")
+        tapRecognizer.numberOfTapsRequired = 1
+   //     tapRecognizer.delegate = self
+        self.view.addGestureRecognizer(tapRecognizer)
+        
         /* Configure the UI */
       //  self.configureUI()
     }
@@ -49,20 +54,20 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        //self.addKeyboardDismissRecognizer()
+      //  self.addKeyboardDismissRecognizer()
         //self.subscribeToKeyboardNotifications()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-       // self.removeKeyboardDismissRecognizer()
-       // self.unsubscribeToKeyboardNotifications()
+     //  self.removeKeyboardDismissRecognizer()
+ //       self.unsubscribeToKeyboardNotifications()
     }
     
     // MARK: - Keyboard Fixes
     
- /*   func addKeyboardDismissRecognizer() {
+   func addKeyboardDismissRecognizer() {
         self.view.addGestureRecognizer(tapRecognizer!)
     }
     
@@ -73,36 +78,109 @@ class LoginViewController: UIViewController {
     func handleSingleTap(recognizer: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
-   */
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
+    }
+    
+    @IBAction func moveKeyboard(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+    }
+    
+    func getKeyboardHeight(notification: NSNotification) -> CGFloat {
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+        return keyboardSize.CGRectValue().height
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        view.frame.origin.y -= getKeyboardHeight(notification)
+        
+    }
+    func keyboardWillHide(notification: NSNotification) {
+        view.frame.origin.y += getKeyboardHeight(notification)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name:
+            UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name:
+            UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    //Alert
+    
+    func dismissAlert(alert: UIAlertAction!)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func openAlertView(errorMessage: String){
+        let alrtController : UIAlertController = UIAlertController (title: "Error Message: ", message: errorMessage, preferredStyle: .Alert)
+        let cancelAction: UIAlertAction = UIAlertAction (title: "Cancel", style: .Cancel, handler: dismissAlert)
+        alrtController.addAction(cancelAction)
+        self.presentViewController(alrtController, animated: true, completion: nil)
+    }
+
     // MARK: - Login
     
-   /*
-    // @IBAction func loginButtonTouch(sender: AnyObject) {
+   
+     @IBAction func loginButtonTouch(sender: AnyObject) {
+        
+         debugTextLabel.text = nil
         if usernameTextField.text.isEmpty {
             debugTextLabel.text = "Username Empty."
+            openAlertView("Username Empty.")
         } else if passwordTextField.text.isEmpty {
             debugTextLabel.text = "Password Empty."
+            openAlertView("Password Empty.")
         } else {
-            
+            println("ID field \(usernameTextField.text)")
+            println("password field \(passwordTextField.text)")
             let request = NSMutableURLRequest(URL: NSURL(string: "https://www.udacity.com/api/session")!)
             request.HTTPMethod = "POST"
             request.addValue("application/json", forHTTPHeaderField: "Accept")
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.HTTPBody = "{\"udacity\": {\"username\": \"account@domain.com\", \"password\": \"********\"}}".dataUsingEncoding(NSUTF8StringEncoding)
+       //   request.HTTPBody = "{\"udacity\": {\"username\": \(usernameTextField.text)\", \"password\": \(passwordTextField.text)\"}}".dataUsingEncoding(NSUTF8StringEncoding)
+            
+           request.HTTPBody = "{\"udacity\": {\"username\": \"nycjing@gmail.com\", \"password\": \"Spring2014\"}}".dataUsingEncoding(NSUTF8StringEncoding)
+
+            
             let session = NSURLSession.sharedSession()
             let task = session.dataTaskWithRequest(request) { data, response, error in
             if error != nil { // Handle error…
-            return
-            }
-            let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5)) /* subset response data! */
-            println(NSString(data: newData, encoding: NSUTF8StringEncoding))
+               self.debugTextLabel.text = "Could not complete the request"
+               self.openAlertView("Could not complete the request")
+            }else{
+                
+                var parsingError: NSError? = nil
+                //self.showWindow.text = String(stringInterpolationSegment: data)
+                
+                let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5)) /* subset response data! */
+                
+                let parsedResult = NSJSONSerialization.JSONObjectWithData(newData, options: NSJSONReadingOptions.AllowFragments, error: &parsingError)  as! NSDictionary
+                
+              if  parsedResult["error"] != nil {
+                
+                    self.debugTextLabel.text = parsedResult["error"] as? String
+                
+                    println("Error  \(self.usernameTextField.text) + \(self.debugTextLabel.text)")
+                    self.openAlertView("UserID & Password not matching to the record")
+                
+                } else {
+                
+                //println("done")
+                NSLog("Login SUCCESS")
+                self.completeLogin()
+
+                }
+                }
             }
             task.resume()
         }
       }//
-*/
+
     
-    @IBAction func loginButtonTouch(sender: AnyObject) {
+  /*  @IBAction func loginButtonTouch(sender: AnyObject) {
         UdaClient.sharedInstance().authenticateWithViewController(self) { (success, errorString) in
             if success {
                 self.completeLogin()
@@ -113,7 +191,7 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: - LoginViewController
-    
+    */
     func completeLogin() {
         dispatch_async(dispatch_get_main_queue(), {
             self.debugTextLabel.text = ""

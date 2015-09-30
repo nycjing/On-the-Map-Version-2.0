@@ -428,7 +428,7 @@ class UdaClient : NSObject{
     
    
     
-    func getConfig(completionHandler: (didSucceed: Bool, error: NSError?) -> Void) {
+   /* func getConfig(completionHandler: (didSucceed: Bool, error: NSError?) -> Void) {
         
         /* 1. Specify parameters, method (if has {key}), and HTTP body (if POST) */
         var parameters = [String: AnyObject]()
@@ -446,7 +446,7 @@ class UdaClient : NSObject{
                 completionHandler(didSucceed: false, error: NSError(domain: "getConfig parsing", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not parse getConfig"]))
             }
         }
-    }
+    }*/
 }
 
 

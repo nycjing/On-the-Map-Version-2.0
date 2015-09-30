@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFED77891BBC398600660416 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED77881BBC398600660416 /* MapView.swift */; };
 		BFF02ABD1B95D1C100E6CAAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF02ABC1B95D1C100E6CAAE /* AppDelegate.swift */; };
 		BFF02AC01B95D1C100E6CAAE /* on_the_map.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFF02ABE1B95D1C100E6CAAE /* on_the_map.xcdatamodeld */; };
 		BFF02AC21B95D1C100E6CAAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF02AC11B95D1C100E6CAAE /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BFED77881BBC398600660416 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		BFF02AB71B95D1C100E6CAAE /* on the map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "on the map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF02ABB1B95D1C100E6CAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFF02ABC1B95D1C100E6CAAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				BFF02ABC1B95D1C100E6CAAE /* AppDelegate.swift */,
 				BFF02AE31B9609A000E6CAAE /* Config.swift */,
 				BFF02AC11B95D1C100E6CAAE /* ViewController.swift */,
+				BFED77881BBC398600660416 /* MapView.swift */,
 				BFF02AE11B96088000E6CAAE /* LoginViewController.swift */,
 				BFF039761BA37653005A9E2A /* UdaAuthViewController.swift */,
 				BFF039781BA37763005A9E2A /* UdaClient.swift */,
@@ -237,6 +240,7 @@
 				BFF02AE21B96088000E6CAAE /* LoginViewController.swift in Sources */,
 				BFF039771BA37653005A9E2A /* UdaAuthViewController.swift in Sources */,
 				BFF02AC01B95D1C100E6CAAE /* on_the_map.xcdatamodeld in Sources */,
+				BFED77891BBC398600660416 /* MapView.swift in Sources */,
 				BFF02AE41B9609A000E6CAAE /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

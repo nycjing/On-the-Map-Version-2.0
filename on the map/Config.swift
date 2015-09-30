@@ -17,7 +17,7 @@ private let _fileURL: NSURL = _documentsDirectoryURL.URLByAppendingPathComponent
 
 // MARK: - Config Class
 
-class Config: NSObject, NSCoding {
+class Config: NSObject{
     
     /* Default values from 1/12/15 */
   var baseImageURLString = "https://www.udacity.com/api/session/"
@@ -27,7 +27,7 @@ class Config: NSObject, NSCoding {
     var dateUpdated: NSDate? = nil
     
     /* Returns the number days since the config was last updated */
-    var daysSinceLastUpdate: Int? {
+   /* var daysSinceLastUpdate: Int? {
         
         if let lastUpdate = dateUpdated {
             return Int(NSDate().timeIntervalSinceDate(lastUpdate)) / 60*60*24
@@ -168,5 +168,5 @@ class Config: NSObject, NSCoding {
         } else {
             return nil
         }
-    } 
+    } */
 }

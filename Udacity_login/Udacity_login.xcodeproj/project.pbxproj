@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFF489131BAD98E300A6EC55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF489121BAD98E300A6EC55 /* AppDelegate.swift */; };
+		BFF489161BAD98E300A6EC55 /* Udacity_login.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFF489141BAD98E300A6EC55 /* Udacity_login.xcdatamodeld */; };
+		BFF489181BAD98E300A6EC55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF489171BAD98E300A6EC55 /* ViewController.swift */; };
+		BFF4891B1BAD98E300A6EC55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF489191BAD98E300A6EC55 /* Main.storyboard */; };
+		BFF4891D1BAD98E300A6EC55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF4891C1BAD98E300A6EC55 /* Images.xcassets */; };
+		BFF489201BAD98E300A6EC55 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF4891E1BAD98E300A6EC55 /* LaunchScreen.xib */; };
+		BFF4892C1BAD98E300A6EC55 /* Udacity_loginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4892B1BAD98E300A6EC55 /* Udacity_loginTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFF489261BAD98E300A6EC55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFF489051BAD98E300A6EC55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFF4890C1BAD98E300A6EC55;
+			remoteInfo = Udacity_login;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BFF4890D1BAD98E300A6EC55 /* Udacity_login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Udacity_login.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFF489111BAD98E300A6EC55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF489121BAD98E300A6EC55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFF489151BAD98E300A6EC55 /* Udacity_login.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Udacity_login.xcdatamodel; sourceTree = "<group>"; };
+		BFF489171BAD98E300A6EC55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFF4891A1BAD98E300A6EC55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFF4891C1BAD98E300A6EC55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BFF4891F1BAD98E300A6EC55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BFF489251BAD98E300A6EC55 /* Udacity_loginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Udacity_loginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFF4892A1BAD98E300A6EC55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF4892B1BAD98E300A6EC55 /* Udacity_loginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Udacity_loginTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFF4890A1BAD98E300A6EC55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFF489221BAD98E300A6EC55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFF489041BAD98E300A6EC55 = {
+			isa = PBXGroup;
+			children = (
+				BFF4890F1BAD98E300A6EC55 /* Udacity_login */,
+				BFF489281BAD98E300A6EC55 /* Udacity_loginTests */,
+				BFF4890E1BAD98E300A6EC55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFF4890E1BAD98E300A6EC55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFF4890D1BAD98E300A6EC55 /* Udacity_login.app */,
+				BFF489251BAD98E300A6EC55 /* Udacity_loginTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFF4890F1BAD98E300A6EC55 /* Udacity_login */ = {
+			isa = PBXGroup;
+			children = (
+				BFF489121BAD98E300A6EC55 /* AppDelegate.swift */,
+				BFF489171BAD98E300A6EC55 /* ViewController.swift */,
+				BFF489191BAD98E300A6EC55 /* Main.storyboard */,
+				BFF4891C1BAD98E300A6EC55 /* Images.xcassets */,
+				BFF4891E1BAD98E300A6EC55 /* LaunchScreen.xib */,
+				BFF489141BAD98E300A6EC55 /* Udacity_login.xcdatamodeld */,
+				BFF489101BAD98E300A6EC55 /* Supporting Files */,
+			);
+			path = Udacity_login;
+			sourceTree = "<group>";
+		};
+		BFF489101BAD98E300A6EC55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFF489111BAD98E300A6EC55 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFF489281BAD98E300A6EC55 /* Udacity_loginTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFF4892B1BAD98E300A6EC55 /* Udacity_loginTests.swift */,
+				BFF489291BAD98E300A6EC55 /* Supporting Files */,
+			);
+			path = Udacity_loginTests;
+			sourceTree = "<group>";
+		};
+		BFF489291BAD98E300A6EC55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFF4892A1BAD98E300A6EC55 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFF4890C1BAD98E300A6EC55 /* Udacity_login */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFF4892F1BAD98E300A6EC55 /* Build configuration list for PBXNativeTarget "Udacity_login" */;
+			buildPhases = (
+				BFF489091BAD98E300A6EC55 /* Sources */,
+				BFF4890A1BAD98E300A6EC55 /* Frameworks */,
+				BFF4890B1BAD98E300A6EC55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Udacity_login;
+			productName = Udacity_login;
+			productReference = BFF4890D1BAD98E300A6EC55 /* Udacity_login.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFF489241BAD98E300A6EC55 /* Udacity_loginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFF489321BAD98E300A6EC55 /* Build configuration list for PBXNativeTarget "Udacity_loginTests" */;
+			buildPhases = (
+				BFF489211BAD98E300A6EC55 /* Sources */,
+				BFF489221BAD98E300A6EC55 /* Frameworks */,
+				BFF489231BAD98E300A6EC55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFF489271BAD98E300A6EC55 /* PBXTargetDependency */,
+			);
+			name = Udacity_loginTests;
+			productName = Udacity_loginTests;
+			productReference = BFF489251BAD98E300A6EC55 /* Udacity_loginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFF489051BAD98E300A6EC55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Jing Jia";
+				TargetAttributes = {
+					BFF4890C1BAD98E300A6EC55 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					BFF489241BAD98E300A6EC55 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = BFF4890C1BAD98E300A6EC55;
+					};
+				};
+			};
+			buildConfigurationList = BFF489081BAD98E300A6EC55 /* Build configuration list for PBXProject "Udacity_login" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFF489041BAD98E300A6EC55;
+			productRefGroup = BFF4890E1BAD98E300A6EC55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFF4890C1BAD98E300A6EC55 /* Udacity_login */,
+				BFF489241BAD98E300A6EC55 /* Udacity_loginTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFF4890B1BAD98E300A6EC55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF4891B1BAD98E300A6EC55 /* Main.storyboard in Resources */,
+				BFF489201BAD98E300A6EC55 /* LaunchScreen.xib in Resources */,
+				BFF4891D1BAD98E300A6EC55 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFF489231BAD98E300A6EC55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFF489091BAD98E300A6EC55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF489181BAD98E300A6EC55 /* ViewController.swift in Sources */,
+				BFF489131BAD98E300A6EC55 /* AppDelegate.swift in Sources */,
+				BFF489161BAD98E300A6EC55 /* Udacity_login.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFF489211BAD98E300A6EC55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF4892C1BAD98E300A6EC55 /* Udacity_loginTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFF489271BAD98E300A6EC55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFF4890C1BAD98E300A6EC55 /* Udacity_login */;
+			targetProxy = BFF489261BAD98E300A6EC55 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFF489191BAD98E300A6EC55 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFF4891A1BAD98E300A6EC55 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFF4891E1BAD98E300A6EC55 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFF4891F1BAD98E300A6EC55 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFF4892D1BAD98E300A6EC55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BFF4892E1BAD98E300A6EC55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFF489301BAD98E300A6EC55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Udacity_login/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BFF489311BAD98E300A6EC55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Udacity_login/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BFF489331BAD98E300A6EC55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Udacity_loginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Udacity_login.app/Udacity_login";
+			};
+			name = Debug;
+		};
+		BFF489341BAD98E300A6EC55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Udacity_loginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Udacity_login.app/Udacity_login";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFF489081BAD98E300A6EC55 /* Build configuration list for PBXProject "Udacity_login" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFF4892D1BAD98E300A6EC55 /* Debug */,
+				BFF4892E1BAD98E300A6EC55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFF4892F1BAD98E300A6EC55 /* Build configuration list for PBXNativeTarget "Udacity_login" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFF489301BAD98E300A6EC55 /* Debug */,
+				BFF489311BAD98E300A6EC55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BFF489321BAD98E300A6EC55 /* Build configuration list for PBXNativeTarget "Udacity_loginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFF489331BAD98E300A6EC55 /* Debug */,
+				BFF489341BAD98E300A6EC55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BFF489141BAD98E300A6EC55 /* Udacity_login.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BFF489151BAD98E300A6EC55 /* Udacity_login.xcdatamodel */,
+			);
+			currentVersion = BFF489151BAD98E300A6EC55 /* Udacity_login.xcdatamodel */;
+			path = Udacity_login.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BFF489051BAD98E300A6EC55 /* Project object */;
+}
