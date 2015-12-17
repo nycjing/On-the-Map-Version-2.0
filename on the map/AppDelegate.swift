@@ -11,20 +11,20 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+  
+    var
+    window: UIWindow?
+    
+    
+    var accountKey : String = ""
+    var firstName : String = ""
+    var lastName : String = ""
 
-    var window: UIWindow?
+  //  var locationData=[LocationData]()
 
         /* Constants for Udacity*/
-        let udacity_apiKey = "365362206864879"
-        let baseURLString = "http://www.udacity.com/api/session"
-        let baseURLSecureString = "https://www.udacity.com/api/session"
-        
-        /* Need these for login */
-        var requestToken: String? = nil
-        var sessionID: String? = nil
-        var userID: Int? = nil
-        
-        var config = Config()
+    //    let udacity_apiKey = "365362206864879"
+
         
         func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
             
@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
             }
             
-            return (!urlVars.isEmpty ? "?" : "") + join("&", urlVars)
+            return (!urlVars.isEmpty ? "?" : "") + urlVars.joinWithSeparator("&")
         }
         
     }

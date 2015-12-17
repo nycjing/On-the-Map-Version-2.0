@@ -24,7 +24,7 @@ class LoginButton: UIButton {
     
     // MARK: - Initialization
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.themeBorderedButton()
     }
@@ -35,7 +35,7 @@ class LoginButton: UIButton {
     }
     
     func themeBorderedButton() -> Void {
-        let userInterfaceIdiom = UIDevice.currentDevice().userInterfaceIdiom
+    //    let userInterfaceIdiom = UIDevice.currentDevice().userInterfaceIdiom
         self.layer.masksToBounds = true
         self.layer.cornerRadius = borderedButtonCornerRadius
         self.highlightedBackingColor = darkerBlue
@@ -61,12 +61,12 @@ class LoginButton: UIButton {
     
     // MARK: - Tracking
     
-    override func beginTrackingWithTouch(touch: UITouch, withEvent: UIEvent) -> Bool {
+    override func beginTrackingWithTouch(touch: UITouch, withEvent: UIEvent?) -> Bool {
         self.backgroundColor = self.highlightedBackingColor
         return true
     }
     
-    override func endTrackingWithTouch(touch: UITouch, withEvent: UIEvent) {
+    override func endTrackingWithTouch(touch: UITouch?, withEvent: UIEvent?) {
         self.backgroundColor = self.backingColor
     }
     
@@ -77,7 +77,7 @@ class LoginButton: UIButton {
     // MARK: - Layout
     
     override func sizeThatFits(size: CGSize) -> CGSize {
-        let userInterfaceIdiom = UIDevice.currentDevice().userInterfaceIdiom
+      //  let userInterfaceIdiom = UIDevice.currentDevice().userInterfaceIdiom
         let extraButtonPadding : CGFloat = phoneBorderedButtonExtraPadding
         var sizeThatFits = CGSizeZero
         sizeThatFits.width = super.sizeThatFits(size).width + extraButtonPadding

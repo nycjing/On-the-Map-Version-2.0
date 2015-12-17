@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import Foundation
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController , UITextFieldDelegate {
     
    
     @IBOutlet weak var headerTextLabel: UILabel!
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+
 
     @IBOutlet weak var loginButton: LoginButton!
 
@@ -26,7 +28,7 @@ class LoginViewController: UIViewController {
     
     var backgroundGradient: CAGradientLayer? = nil
     var tapRecognizer: UITapGestureRecognizer? = nil
-    
+
     /* Based on student comments, this was added to help with smaller resolution devices */
    // var keyboardAdjusted = false
    // var lastKeyboardOffset : CGFloat = 0.0
@@ -41,28 +43,24 @@ class LoginViewController: UIViewController {
         
         /* Get the shared URL session */
         session = NSURLSession.sharedSession()
+        self.usernameTextField.delegate = self
+        self.passwordTextField.delegate = self
+
         
-        var tapRecognizer = UITapGestureRecognizer(target: self, action: "handleSingleTap:")
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: "handleSingleTap:")
         tapRecognizer.numberOfTapsRequired = 1
-   //     tapRecognizer.delegate = self
         self.view.addGestureRecognizer(tapRecognizer)
         
-        /* Configure the UI */
-      //  self.configureUI()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-      //  self.addKeyboardDismissRecognizer()
-        //self.subscribeToKeyboardNotifications()
+
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-     //  self.removeKeyboardDismissRecognizer()
- //       self.unsubscribeToKeyboardNotifications()
     }
     
     // MARK: - Keyboard Fixes
@@ -120,85 +118,45 @@ class LoginViewController: UIViewController {
         alrtController.addAction(cancelAction)
         self.presentViewController(alrtController, animated: true, completion: nil)
     }
-
-    // MARK: - Login
+    @IBAction func signUp(sender: UIButton) {
+        UdaClient.showSignUp()
+    }
     
-   
-     @IBAction func loginButtonTouch(sender: AnyObject) {
-        
-         debugTextLabel.text = nil
-        if usernameTextField.text.isEmpty {
-            debugTextLabel.text = "Username Empty."
-            openAlertView("Username Empty.")
-        } else if passwordTextField.text.isEmpty {
-            debugTextLabel.text = "Password Empty."
-            openAlertView("Password Empty.")
-        } else {
-            println("ID field \(usernameTextField.text)")
-            println("password field \(passwordTextField.text)")
-            let request = NSMutableURLRequest(URL: NSURL(string: "https://www.udacity.com/api/session")!)
-            request.HTTPMethod = "POST"
-            request.addValue("application/json", forHTTPHeaderField: "Accept")
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-       //   request.HTTPBody = "{\"udacity\": {\"username\": \(usernameTextField.text)\", \"password\": \(passwordTextField.text)\"}}".dataUsingEncoding(NSUTF8StringEncoding)
-            
-           request.HTTPBody = "{\"udacity\": {\"username\": \"nycjing@gmail.com\", \"password\": \"Spring2014\"}}".dataUsingEncoding(NSUTF8StringEncoding)
+    @IBAction func sendButton(sender: UIButton) {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        UdaClient.login(usernameTextField.text!,password: passwordTextField.text!){ (success, jsonData) in
+            if(success){
+                self.finishLogin(jsonData)
 
-            
-            let session = NSURLSession.sharedSession()
-            let task = session.dataTaskWithRequest(request) { data, response, error in
-            if error != nil { // Handle error…
-               self.debugTextLabel.text = "Could not complete the request"
-               self.openAlertView("Could not complete the request")
-            }else{
-                
-                var parsingError: NSError? = nil
-                //self.showWindow.text = String(stringInterpolationSegment: data)
-                
-                let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5)) /* subset response data! */
-                
-                let parsedResult = NSJSONSerialization.JSONObjectWithData(newData, options: NSJSONReadingOptions.AllowFragments, error: &parsingError)  as! NSDictionary
-                
-              if  parsedResult["error"] != nil {
-                
-                    self.debugTextLabel.text = parsedResult["error"] as? String
-                
-                    println("Error  \(self.usernameTextField.text) + \(self.debugTextLabel.text)")
-                    self.openAlertView("UserID & Password not matching to the record")
-                
-                } else {
-                
-                //println("done")
-                NSLog("Login SUCCESS")
-                self.completeLogin()
-
-                }
-                }
-            }
-            task.resume()
-        }
-      }//
-
-    
-  /*  @IBAction func loginButtonTouch(sender: AnyObject) {
-        UdaClient.sharedInstance().authenticateWithViewController(self) { (success, errorString) in
-            if success {
-                self.completeLogin()
-            } else {
-                self.displayError(errorString)
+            }else {
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                let errorText = jsonData["error"] as! String
+                Shared.showError(self, errorString: errorText)
             }
         }
     }
     
-    // MARK: - LoginViewController
-    */
-    func completeLogin() {
+    func finishLogin(data : [String:AnyObject?]){
         dispatch_async(dispatch_get_main_queue(), {
-            self.debugTextLabel.text = ""
-            let controller = self.storyboard!.instantiateViewControllerWithIdentifier("ManagerNavigationController") as! UINavigationController
-            self.presentViewController(controller, animated: true, completion: nil)
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let account = data["account"] as! [String:AnyObject]
+            let accountKey = account["key"] as! String
+            appDelegate.accountKey = accountKey
+            UdaClient.getPublicData(accountKey, completionHandler: {(success,data) in
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                if(success){
+                    let user = data["user"] as! [String:AnyObject]
+                    appDelegate.firstName = user["first_name"] as! String
+                    appDelegate.lastName = user["last_name"] as! String
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+                else{
+                    Shared.showError(self, errorString: data["ErrorString"] as! String)
+                }
+            })
         })
     }
+    
     
     func displayError(errorString: String?) {
         dispatch_async(dispatch_get_main_queue(), {
@@ -210,14 +168,14 @@ class LoginViewController: UIViewController {
     
     func configureUI() {
         /* Configure background gradient */
-        self.view.backgroundColor = UIColor.clearColor()
+        view.backgroundColor = UIColor.clearColor()
         let colorTop = UIColor(red: 0.345, green: 0.839, blue: 0.988, alpha: 1.0).CGColor
         let colorBottom = UIColor(red: 0.023, green: 0.569, blue: 0.910, alpha: 1.0).CGColor
-        var backgroundGradient = CAGradientLayer()
+        let backgroundGradient = CAGradientLayer()
         backgroundGradient.colors = [colorTop, colorBottom]
         backgroundGradient.locations = [0.0, 1.0]
         backgroundGradient.frame = view.frame
-        self.view.layer.insertSublayer(backgroundGradient, atIndex: 0)
+        view.layer.insertSublayer(backgroundGradient, atIndex: 0)
         
         /* Configure header text label */
         headerTextLabel.font = UIFont(name: "AvenirNext-Medium", size: 24.0)

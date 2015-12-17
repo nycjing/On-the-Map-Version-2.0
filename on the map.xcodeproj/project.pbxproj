@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BFED77891BBC398600660416 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED77881BBC398600660416 /* MapView.swift */; };
+		BF3B8B841BE813F000348597 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B8B831BE813F000348597 /* Shared.swift */; };
+		BFB30CD51C1F047E008BA1A2 /* ParseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB30CD41C1F047E008BA1A2 /* ParseConstant.swift */; };
+		BFED77891BBC398600660416 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED77881BBC398600660416 /* MapViewController.swift */; };
+		BFED778D1BBC942300660416 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED778C1BBC942300660416 /* ListViewController.swift */; };
 		BFF02ABD1B95D1C100E6CAAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF02ABC1B95D1C100E6CAAE /* AppDelegate.swift */; };
 		BFF02AC01B95D1C100E6CAAE /* on_the_map.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFF02ABE1B95D1C100E6CAAE /* on_the_map.xcdatamodeld */; };
-		BFF02AC21B95D1C100E6CAAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF02AC11B95D1C100E6CAAE /* ViewController.swift */; };
 		BFF02AC51B95D1C100E6CAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF02AC31B95D1C100E6CAAE /* Main.storyboard */; };
 		BFF02AC71B95D1C100E6CAAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF02AC61B95D1C100E6CAAE /* Images.xcassets */; };
 		BFF02ACA1B95D1C100E6CAAE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF02AC81B95D1C100E6CAAE /* LaunchScreen.xib */; };
 		BFF02AD61B95D1C100E6CAAE /* on_the_mapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF02AD51B95D1C100E6CAAE /* on_the_mapTests.swift */; };
 		BFF02AE01B95E1AB00E6CAAE /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF02ADF1B95E1AB00E6CAAE /* LoginButton.swift */; };
 		BFF02AE21B96088000E6CAAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF02AE11B96088000E6CAAE /* LoginViewController.swift */; };
-		BFF02AE41B9609A000E6CAAE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF02AE31B9609A000E6CAAE /* Config.swift */; };
-		BFF039771BA37653005A9E2A /* UdaAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF039761BA37653005A9E2A /* UdaAuthViewController.swift */; };
 		BFF039791BA37763005A9E2A /* UdaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF039781BA37763005A9E2A /* UdaClient.swift */; };
+		BFF423751C0DBA37001B8072 /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF423741C0DBA37001B8072 /* ParseClient.swift */; };
+		BFF423771C0E282D001B8072 /* StudentInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF423761C0E282D001B8072 /* StudentInfomation.swift */; };
+		BFF423791C0E29D1001B8072 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF423781C0E29D1001B8072 /* LocationViewController.swift */; };
+		BFF4237B1C0E2A71001B8072 /* PreviewLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4237A1C0E2A71001B8072 /* PreviewLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,12 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BFED77881BBC398600660416 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BF3B8B831BE813F000348597 /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		BFB30CD41C1F047E008BA1A2 /* ParseConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseConstant.swift; sourceTree = "<group>"; };
+		BFED77881BBC398600660416 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BFED778C1BBC942300660416 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		BFF02AB71B95D1C100E6CAAE /* on the map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "on the map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF02ABB1B95D1C100E6CAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFF02ABC1B95D1C100E6CAAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF02ABF1B95D1C100E6CAAE /* on_the_map.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = on_the_map.xcdatamodel; sourceTree = "<group>"; };
-		BFF02AC11B95D1C100E6CAAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BFF02AC41B95D1C100E6CAAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFF02AC61B95D1C100E6CAAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BFF02AC91B95D1C100E6CAAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -47,9 +53,11 @@
 		BFF02AD51B95D1C100E6CAAE /* on_the_mapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = on_the_mapTests.swift; sourceTree = "<group>"; };
 		BFF02ADF1B95E1AB00E6CAAE /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		BFF02AE11B96088000E6CAAE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		BFF02AE31B9609A000E6CAAE /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		BFF039761BA37653005A9E2A /* UdaAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdaAuthViewController.swift; sourceTree = "<group>"; };
 		BFF039781BA37763005A9E2A /* UdaClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdaClient.swift; sourceTree = "<group>"; };
+		BFF423741C0DBA37001B8072 /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
+		BFF423761C0E282D001B8072 /* StudentInfomation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentInfomation.swift; sourceTree = "<group>"; };
+		BFF423781C0E29D1001B8072 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		BFF4237A1C0E2A71001B8072 /* PreviewLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,12 +100,16 @@
 			isa = PBXGroup;
 			children = (
 				BFF02ABC1B95D1C100E6CAAE /* AppDelegate.swift */,
-				BFF02AE31B9609A000E6CAAE /* Config.swift */,
-				BFF02AC11B95D1C100E6CAAE /* ViewController.swift */,
-				BFED77881BBC398600660416 /* MapView.swift */,
+				BFED778C1BBC942300660416 /* ListViewController.swift */,
+				BFF4237A1C0E2A71001B8072 /* PreviewLocationViewController.swift */,
+				BFED77881BBC398600660416 /* MapViewController.swift */,
 				BFF02AE11B96088000E6CAAE /* LoginViewController.swift */,
-				BFF039761BA37653005A9E2A /* UdaAuthViewController.swift */,
 				BFF039781BA37763005A9E2A /* UdaClient.swift */,
+				BFF423741C0DBA37001B8072 /* ParseClient.swift */,
+				BFB30CD41C1F047E008BA1A2 /* ParseConstant.swift */,
+				BFF423761C0E282D001B8072 /* StudentInfomation.swift */,
+				BF3B8B831BE813F000348597 /* Shared.swift */,
+				BFF423781C0E29D1001B8072 /* LocationViewController.swift */,
 				BFF02AC31B95D1C100E6CAAE /* Main.storyboard */,
 				BFF02ADF1B95E1AB00E6CAAE /* LoginButton.swift */,
 				BFF02AC61B95D1C100E6CAAE /* Images.xcassets */,
@@ -177,7 +189,9 @@
 		BFF02AAF1B95D1C100E6CAAE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Jing Jia";
 				TargetAttributes = {
 					BFF02AB61B95D1C100E6CAAE = {
@@ -233,15 +247,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFF02AC21B95D1C100E6CAAE /* ViewController.swift in Sources */,
+				BF3B8B841BE813F000348597 /* Shared.swift in Sources */,
 				BFF02AE01B95E1AB00E6CAAE /* LoginButton.swift in Sources */,
 				BFF02ABD1B95D1C100E6CAAE /* AppDelegate.swift in Sources */,
+				BFF4237B1C0E2A71001B8072 /* PreviewLocationViewController.swift in Sources */,
 				BFF039791BA37763005A9E2A /* UdaClient.swift in Sources */,
+				BFF423751C0DBA37001B8072 /* ParseClient.swift in Sources */,
+				BFB30CD51C1F047E008BA1A2 /* ParseConstant.swift in Sources */,
 				BFF02AE21B96088000E6CAAE /* LoginViewController.swift in Sources */,
-				BFF039771BA37653005A9E2A /* UdaAuthViewController.swift in Sources */,
+				BFF423771C0E282D001B8072 /* StudentInfomation.swift in Sources */,
 				BFF02AC01B95D1C100E6CAAE /* on_the_map.xcdatamodeld in Sources */,
-				BFED77891BBC398600660416 /* MapView.swift in Sources */,
-				BFF02AE41B9609A000E6CAAE /* Config.swift in Sources */,
+				BFED77891BBC398600660416 /* MapViewController.swift in Sources */,
+				BFF423791C0E29D1001B8072 /* LocationViewController.swift in Sources */,
+				BFED778D1BBC942300660416 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +322,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -370,6 +389,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "on the map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "microbiz.com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -380,6 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "on the map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "microbiz.com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -398,6 +419,7 @@
 				);
 				INFOPLIST_FILE = "on the mapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "microbiz.com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/on the map.app/on the map";
 			};
@@ -413,6 +435,7 @@
 				);
 				INFOPLIST_FILE = "on the mapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "microbiz.com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/on the map.app/on the map";
 			};
