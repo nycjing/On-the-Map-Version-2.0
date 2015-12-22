@@ -17,8 +17,9 @@ class MapViewController : UIViewController, UINavigationControllerDelegate, MKMa
     @IBAction func navLogout(sender: AnyObject) {
         UdaClient.logout(self)
     }
-    
+   // var userObjectID = ""
     @IBAction func showLocation(sender: UIBarButtonItem) {
+        
         Shared.showLocationVC(self)
     }
     override func viewDidLoad() {
